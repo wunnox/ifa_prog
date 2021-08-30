@@ -12,37 +12,29 @@
 #
 ##############################################
 
-drop table if exists schiff;
-create table schiff(
-    schiff_id int primary key auto_increment,
-    name varchar(30));
-
-drop table if exists person;
-create table person(
+drop table if exists personen;
+create table personen(
     id int primary key auto_increment,
     name varchar(30),
     funktion_id int,
     schiff_id int,
     constraint fk_schiff
     foreign key (schiff_id)
-    references schiff(schiff_id)
+    references StarTrek_Schiffe(schiff_id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
     );
 
-insert into schiff values(NULL, 'U.S.S. Enterprise NCC-1701');
-insert into schiff values(NULL, 'USS Enterprise NCC-1701-E');
-
-insert into person values(NULL, 'James T. Kirk',1,1);
-insert into person values(NULL, 'Jean-Luc Picard',1, 2);
-insert into person values(NULL, 'Spock',2,1);
-insert into person values(NULL, 'William T.Riker',2,2);
-insert into person values(NULL, 'Hikaru Sulu',3,1);
-insert into person values(NULL, 'Ro Laren',3,2);
-insert into person values(NULL, 'Pavel Chekov',4,1);
-insert into person values(NULL, 'Wesley Crusher',4,2);
-insert into person values(NULL, 'Montgomery Scott',5,1);
-insert into person values(NULL, 'Geordi LaForge',5,2);
-insert into person values(NULL, 'Dr. Leonard McCoy',6,1);
-insert into person values(NULL, 'Dr.Beverly Crusher',6,2);
+insert into personen values(1, 'James T. Kirk',1,96);
+insert into personen values(2, 'Jean-Luc Picard',1, 102);
+insert into personen values(3, 'Spock',2,96);
+insert into personen values(4, 'William T.Riker',2,102);
+insert into personen values(5, 'Hikaru Sulu',3,96);
+insert into personen values(6, 'Ro Laren',3,102);
+insert into personen values(7, 'Pavel Chekov',4,96);
+insert into personen values(8, 'Wesley Crusher',4,102);
+insert into personen values(9, 'Montgomery Scott',5,96);
+insert into personen values(10, 'Geordi LaForge',5,102);
+insert into personen values(11, 'Dr. Leonard McCoy',6,96);
+insert into personen values(12, 'Dr.Beverly Crusher',6,102);
 
