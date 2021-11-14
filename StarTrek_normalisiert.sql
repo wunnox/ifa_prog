@@ -64,8 +64,11 @@ create table schiff(
     id int primary key auto_increment,
     name varchar(30));
 
-insert into schiff values(NULL, 'U.S.S. Enterprise NCC-1701');
-insert into schiff values(NULL, 'USS Enterprise NCC-1701-E');
+insert into schiff values(1, 'Enterprise NCC-1701');
+insert into schiff values(2, 'Enterprise NCC-1701-E');
+insert into schiff values(3, 'Antares NCC-501');
+insert into schiff values(4, 'Aurora NC-17740');
+insert into schiff values(5, 'Yorkshire NCC-330');
 
 drop table if exists funktion;
 create table funktion(
